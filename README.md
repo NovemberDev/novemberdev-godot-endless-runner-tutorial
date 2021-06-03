@@ -7,7 +7,7 @@
  ## Screenshot
 ![Screenshot](repo_images/endlessrunner_0.png)
 
-## Screenshot of Nov Run (final game)
+## Screenshots of Nov Run (final game)
 ![Screenshot](repo_images/novrun_0.png)
 ![Screenshot](repo_images/novrun_1.png)
 
@@ -22,10 +22,10 @@ the toolscript "Compile Parts", which spawns an OBJECT_LAYOUTS node, where you c
 
 ![Screenshot](repo_images/endlessrunner_1.png)
 
-If you press the "Compile Parts"-Button again, the toolscript
+If you press the "Compile Parts"-Button again, the Toolscript
 creates a "res://compiled_parts.tres"-File, which contains your configuration and gets parsed at runtime foreach part of any theme.
 
-In the background another ToolScript (ObjectPooling.gd) creates instances of your scenes to make sure the game doesn't stutter while you play.
+In the background another Toolscript (ObjectPooling.gd) creates instances of your scenes to make sure the game doesn't stutter while you play.
 
 ## How to extend the game?
 
