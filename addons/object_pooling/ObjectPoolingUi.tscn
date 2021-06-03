@@ -1,0 +1,142 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/object_pooling/theme.tres" type="Theme" id=1]
+
+[node name="Popup" type="WindowDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -339.0
+margin_top = -271.0
+margin_right = 476.0
+margin_bottom = 292.0
+rect_min_size = Vector2( 400, 520 )
+theme = ExtResource( 1 )
+popup_exclusive = true
+window_title = "ObjectPooling Ui"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scenes" type="ScrollContainer" parent="."]
+anchor_top = 0.046
+anchor_right = 1.0
+anchor_bottom = 0.477
+margin_left = 8.0
+margin_top = 0.101999
+margin_right = -407.0
+margin_bottom = 249.449
+rect_min_size = Vector2( 385, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="list" type="VBoxContainer" parent="scenes"]
+margin_right = 383.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 383, 208 )
+
+[node name="TEMPLATE" type="Panel" parent="scenes/list"]
+margin_right = 383.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 372, 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PATH" type="LineEdit" parent="scenes/list/TEMPLATE"]
+anchor_right = 0.731
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 0.0270081
+margin_bottom = -5.0
+focus_mode = 0
+text = "res://scenes/some_scene"
+editable = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="COUNT" type="SpinBox" parent="scenes/list/TEMPLATE"]
+anchor_left = 0.731
+anchor_right = 0.982
+anchor_bottom = 1.0
+margin_left = 8.02701
+margin_top = 8.0
+margin_right = -12.106
+margin_bottom = -5.0
+max_value = 999999.0
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TITLE_0" type="Label" parent="."]
+margin_left = 8.0
+margin_right = 104.0
+margin_bottom = 24.0
+text = "Scenes found"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DESCRIPTION_0" type="Label" parent="."]
+margin_left = 296.0
+margin_right = 398.0
+margin_bottom = 24.0
+text = "instance count"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DESCRIPTION_1" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -388.49
+margin_top = 33.978
+margin_right = -22.4897
+margin_bottom = 310.978
+text = "On the left are all the scenes of your project. The count 
+will create the amount of instances on launch.
+
+Closing this will compile and register it as an autoload. 
+If you need insights, check DEBUG before closing.
+
+load(\"res://scene.tscn\").instance() becomes:
+
+  ObjectPooling.load_from_pool(\"res://scene.tscn\")
+
+queue_free($SceneInstance) becomes:
+
+  ObjectPooling.queue_free_instance($SceneInstance)
+
+If you need additional control over what happens, 
+add this method to your root level scene scripts:
+
+  func on_object_pooling_reset(activate):
+    if !activate:
+      for obstacle in $OBSTACLES.get_children():
+        ObjectPooling.queue_free_instance(obstacle)
+
+Common pitfalls:
+- don't queue_free_instance() the same instance twice
+- don't pool objects that don't get loaded or free'd often
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DEBUG" type="CheckBox" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -32.0
+margin_right = 77.0
+margin_bottom = -8.0
+text = "Debug"
+__meta__ = {
+"_edit_use_anchors_": false
+}

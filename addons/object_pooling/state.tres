@@ -1,0 +1,20 @@
+{
+	"scenes": {
+		"res://scenes/COIN.tscn": 20,
+		"res://scenes/MAGNET.tscn": 13,
+		"res://scenes/obstacles/middle.tscn": 13,
+		"res://scenes/obstacles/side.tscn": 13,
+		"res://scenes/obstacles/single.tscn": 13,
+		"res://scenes/obstacle_scenes/middle_TERRAN_0.tscn": 13,
+		"res://scenes/obstacle_scenes/side_TERRAN_0.tscn": 13,
+		"res://scenes/obstacle_scenes/single_TERRAN_0.tscn": 13,
+		"res://scenes/obstacle_scenes/single_TERRAN_1.tscn": 13,
+		"res://scenes/obstacle_scenes/single_TERRAN_2.tscn": 13,
+		"res://scenes/parts/CORRIDOR_TERRAN_0.tscn": 13,
+		"res://scenes/parts/LCURVE_TERRAN_0.tscn": 13,
+		"res://scenes/parts/RCURVE_TERRAN_0.tscn": 13,
+		"res://scenes/PLAYER.tscn": 0,
+		"res://scenes/WORLD.tscn": 0
+	},
+	"DEBUG": true
+}

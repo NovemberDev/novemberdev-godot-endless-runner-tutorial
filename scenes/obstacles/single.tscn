@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/obstacle_scenes/single_TERRAN_0.tscn" type="PackedScene" id=1]
+
+[node name="single_0" type="Spatial" groups=[
+"obstacle",
+]]
+
+[node name="single_0" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.154867, 0 )

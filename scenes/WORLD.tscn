@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/WORLD.gd" type="Script" id=1]
+[ext_resource path="res://scenes/PLAYER.tscn" type="PackedScene" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0.866667, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[node name="WORLD" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="PARTS" type="Spatial" parent="."]
+
+[node name="PLAYER" parent="." instance=ExtResource( 2 )]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="COINLEVEL" type="ProgressBar" parent="Control"]
+margin_left = 22.0678
+margin_top = 506.135
+margin_right = 511.068
+margin_bottom = 529.135
+rect_rotation = 270.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SPEEDBTN" type="Button" parent="Control"]
+margin_left = 7.34314
+margin_top = 521.0
+margin_right = 58.3431
+margin_bottom = 541.0
+text = "SPEED"
+
+[node name="DISTANCE" type="Label" parent="Control"]
+margin_left = 831.0
+margin_top = 15.0
+margin_right = 1011.0
+margin_bottom = 32.0
+text = "2000 Distance"
+align = 2
+
+[node name="COINS" type="Label" parent="Control"]
+margin_left = 831.0
+margin_top = 32.0
+margin_right = 1011.0
+margin_bottom = 49.0
+text = "30 Coins"
+align = 2
+
+[node name="SPEED" type="Label" parent="Control"]
+margin_left = 831.0
+margin_top = 49.0
+margin_right = 1011.0
+margin_bottom = 66.0
+text = "2 SPEED"
+align = 2
