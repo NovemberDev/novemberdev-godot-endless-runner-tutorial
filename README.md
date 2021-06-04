@@ -38,3 +38,8 @@ var themes = ["TERRAN"]
 var themes = ["TERRAN", "EGYPT"]
 ```
 
+## Nov Run on Google Play 
+
+https://play.google.com/store/apps/details?id=com.novemberdev.novemberdevnovrun
+
+Note: this game is still a technical test, just with more assets now
